@@ -22,7 +22,7 @@ body {
   font: 16.5px/1.65 -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-.wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 2px; }
 p { margin: 0 0 12px; }
@@ -32,7 +32,7 @@ h1, h2, h3 { margin: 0; font-weight: 600; }
 
 /* Navigation */
 .nav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
-.nav-in { max-width: 860px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.nav-in { max-width: 960px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .brand { font-weight: 600; color: var(--text); white-space: nowrap; }
 .brand:hover { text-decoration: none; }
 .nav-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 20px; font-size: .9rem; }
