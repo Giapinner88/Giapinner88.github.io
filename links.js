@@ -16,7 +16,7 @@ window.LINKS = {
   prb:     { paper: "", video: "", code: "" },
   flix:    { paper: "", video: "", code: "" },
 
-  icra:    { paper: "papers/icra2027-beyond-static-reach.pdf", video: "", code: "" },
+  icra:    { paper: "", video: "", code: "" },
   journal: { paper: "", video: "", code: "" },
   ifomm:   { paper: "https://link.springer.com/chapter/10.1007/978-3-032-29469-2_23", video: "", code: "" },
   hust:    { paper: "papers/hust2026-swing-up-nmpc-prb.pdf", video: "", code: "" },

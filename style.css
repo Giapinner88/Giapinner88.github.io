@@ -112,5 +112,3 @@ h2 { font-size: 1.25rem; padding-bottom: 6px; margin-bottom: 18px; border-bottom
 .media.fit { background: #fff; }
 .media.fit video { object-fit: contain; }
 
-.card > .media.fig { margin-top: 10px; aspect-ratio: auto; background: #fff; }
-.media.fig img { position: static; height: auto; object-fit: contain; display: block; }
