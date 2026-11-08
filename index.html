@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giap Nguyen Trong | Robotics &amp; Control</title>
+  <meta name="description" content="Research on dynamics, estimation and control of underactuated and flexible robotic systems.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <h1>Giap Nguyen Trong</h1>
+    <p class="tagline">Undergraduate researcher in robotics and control, Hanoi University of Science and Technology (HUST)</p>
+    <nav class="links">
+      <a href="cv.pdf">CV (PDF)</a>
+      <a href="https://github.com/Giapinner88">GitHub</a>
+      <a href="mailto:giapwork98@gmail.com">Email</a>
+      <a href="https://orcid.org/0009-0005-3091-1985">ORCID</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="about">
+    <h2>Research interests</h2>
+    <p>
+      My research focuses on the dynamics, estimation, and control of underactuated and flexible robotic systems.
+      I am interested in reduced-order models, such as pseudo-rigid-body (PRB) chains, that stay accurate under
+      large deformation yet are light enough to run inside a real-time control loop, and in pairing them with
+      nonlinear and sampling-based model predictive control and with state estimation. A recurring theme is control
+      under minimal sensing: the deformation of a flexible body is often not measured, so it must be estimated, and
+      model mismatch can bias both the estimate and the controller acting on it. I also study learning-based
+      predictors of dynamic behavior from sparse observations, with the aim of exploiting a flexible body's passive
+      dynamics for tasks such as swing-up, tool manipulation, and locomotion.
+    </p>
+    <p class="meta">
+      Currently an engineer at Magic Wave (since April 2026) and a researcher at AiRA Laboratory (HUST) and
+      RMIT Collaborative Robotics (since August 2024). B.Sc. in Mechatronics Engineering, expected May 2027.
+    </p>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <div id="projects" class="cards"></div>
+    <noscript><p>Please enable JavaScript to see the project cards, or read the <a href="cv.pdf">CV</a>.</p></noscript>
+  </section>
+
+  <section id="publications">
+    <h2>Publications &amp; manuscripts</h2>
+    <ol class="pubs" reversed id="pubs"></ol>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:giapwork98@gmail.com">giapwork98@gmail.com</a> &middot;
+      <a href="https://github.com/Giapinner88">github.com/Giapinner88</a> &middot;
+      <a href="cv.pdf">CV</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="wrap foot">Last updated Nov 8, 2026</footer>
+
+<script>
+/* ------------------------------------------------------------------
+   EDIT HERE. For each item, fill the link fields you want to show.
+   Leave a field as "" and its button / video is hidden automatically.
+   - video: a YouTube link (watch, youtu.be, or embed form)
+   - paper: link to the paper page or PDF
+   - code : link to the GitHub repository
+   Only publish links for work you are allowed to make public.
+------------------------------------------------------------------- */
+const PROJECTS = [
+  {
+    title: "Minimal-sensing phantom bending",
+    tag: "Hardware · journal in preparation",
+    summary: "A cart-pole with a flexible TPU beam sensed only at the cart and the base. Reduced-order observers can invent a bending that is not there (phantom bending). A dual-channel UKF and a real-time NMPC balance the beam in simulation and on the physical rig.",
+    video: "", paper: "", code: ""
+  },
+  {
+    title: "Dynamic tool manipulation",
+    tag: "Simulation and learning · ICRA 2027 (under review)",
+    summary: "A learned model predicts a flexible rod's endpoint response from sparse visual markers, and sampling-based MPC uses it to bring the tool tip beyond its quasi-static reach.",
+    video: "", paper: "", code: ""
+  },
+  {
+    title: "Global swing-up via NMPC",
+    tag: "Simulation · HUST Student Scientific Research Conference",
+    summary: "A two-segment PRB model and a jaxopt NMPC that exploits the whip effect to swing up an underactuated flexible inverted pendulum at low solve latency.",
+    video: "", paper: "", code: ""
+  },
+  {
+    title: "High-fidelity PRB modeling",
+    tag: "Simulation · ICEMA 2025",
+    summary: "A floating-frame pseudo-rigid-body model with closed-form joint stiffness identification that matches continuum references closely at high resolution.",
+    video: "", paper: "", code: ""
+  },
+  {
+    title: "Vibration locomotion of a Flix-Walker",
+    tag: "Simulation · IFToMM ISRM 2026",
+    summary: "Behavior maps of a vibration-driven walker in MuJoCo, and a posture-alignment navigation strategy that reaches every benchmark goal under payload and friction changes.",
+    video: "", paper: "", code: ""
+  }
+];
+
+const PUBLICATIONS = [
+  {
+    authors: "<b>Giap Nguyen Trong</b>, Son Dinh Bao, Long, Hai-Nguyen Nguyen, Chien Truong-Quoc",
+    year: "2027",
+    title: "Beyond Static Reach: Learning to Wield a Flexible Tool from Sparse Visual Feedback",
+    venue: "IEEE International Conference on Robotics and Automation (ICRA 2027), under review",
+    paper: "", video: "", code: ""
+  },
+  {
+    authors: "<b>Giap Nguyen Trong</b>, Chien Truong-Quoc",
+    year: "In preparation",
+    title: "Spurious Bending Estimates under Minimal Sensing in Flexible Inverted Pendulums",
+    venue: "Manuscript drafted; experiments ongoing",
+    paper: "", video: "", code: ""
+  },
+  {
+    authors: "Vuong Duc Minh, <b>Giap Nguyen Trong</b>, Minh Tuan Nguyen Thai, Chien Truong-Quoc",
+    year: "2026",
+    title: "Motion-Primitive Navigation for a Flix-Walker under Payload and Friction Variations",
+    venue: "Proceedings of IFToMM ISRM",
+    paper: "", video: "", code: ""
+  },
+  {
+    authors: "<b>Giap Nguyen Trong</b>, Chien Truong-Quoc",
+    year: "2026",
+    title: "Global Swing-up and Vibration Suppression of a Flexible Inverted Pendulum via NMPC and PRB Modeling",
+    venue: "HUST Student Scientific Research Conference (presented)",
+    paper: "", video: "", code: ""
+  },
+  {
+    authors: "<b>Giap Nguyen Trong</b>, Chien Truong-Quoc, Hoang Nguyen Quang",
+    year: "2025",
+    title: "High-Fidelity Modeling of the Flexible Inverted Pendulum via Pseudo-Rigid-Body (PRB)",
+    venue: "8th International Conference on Engineering Mechanics and Automation (ICEMA 2025), Hanoi",
+    paper: "", video: "", code: ""
+  }
+];
+
+/* ------------------------- rendering (no need to edit) ------------------------- */
+function youtubeEmbed(url) {
+  if (!url) return null;
+  const m = url.match(/(?:youtu\.be\/|v=|embed\/)([A-Za-z0-9_-]{11})/);
+  return m ? "https://www.youtube-nocookie.com/embed/" + m[1] : null;
+}
+function buttons(item) {
+  const parts = [];
+  if (item.paper) parts.push('<a class="btn" href="' + item.paper + '">Paper</a>');
+  if (item.video) parts.push('<a class="btn" href="' + item.video + '">Video</a>');
+  if (item.code)  parts.push('<a class="btn" href="' + item.code + '">Code</a>');
+  return parts.length ? '<div class="btns">' + parts.join("") + "</div>" : "";
+}
+document.getElementById("projects").innerHTML = PROJECTS.map(p => {
+  const embed = youtubeEmbed(p.video);
+  const media = embed
+    ? '<div class="video"><iframe src="' + embed + '" title="' + p.title + '" loading="lazy" allowfullscreen></iframe></div>'
+    : "";
+  return '<article class="card">' + media +
+         '<h3>' + p.title + '</h3><p class="tag">' + p.tag + '</p><p>' + p.summary + '</p>' +
+         buttons(p) + "</article>";
+}).join("");
+document.getElementById("pubs").innerHTML = PUBLICATIONS.map(p =>
+  "<li><span class=\"authors\">" + p.authors + "</span>. " + p.year + ". " +
+  "<span class=\"ptitle\">" + p.title + ".</span> <em>" + p.venue + ".</em>" + buttons(p) + "</li>"
+).join("");
+</script>
+</body>
+</html>
