@@ -12,7 +12,7 @@
   <meta property="og:description" content="Dynamics, estimation and control of underactuated and flexible robotic systems, in simulation and on hardware.">
   <meta property="og:url" content="https://giapinner88.github.io/">
   <meta name="twitter:card" content="summary">
-  <meta name="theme-color" content="#0b1220">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -35,21 +35,17 @@
 
 <header class="hero" id="top">
   <div class="wrap hero-in">
-    <div class="hero-text">
-      <p class="eyebrow">Robotics &amp; control researcher</p>
-      <h1>Giap <span class="grad">Nguyen Trong</span></h1>
+    <img class="avatar" src="media/me.jpg" alt="Portrait of Giap Nguyen Trong" width="160" height="160">
+    <div>
+      <h1>Giap Nguyen Trong</h1>
+      <p class="role">Robotics &amp; control researcher &middot; Hanoi University of Science and Technology</p>
       <p class="lead">I study how to estimate and control flexible and underactuated robots, in simulation and on hardware.</p>
-      <p class="meta"><span>HUST, Hanoi</span><span>AiRA Lab</span><span>Magic Wave</span></p>
-      <div class="btn-row">
-        <a class="btn primary" href="cv.pdf">Download CV</a>
-        <a class="btn" href="https://github.com/Giapinner88">GitHub</a>
-        <a class="btn" href="mailto:giapwork98@gmail.com">Email</a>
-        <a class="btn" href="https://orcid.org/0009-0005-3091-1985">ORCID</a>
-      </div>
-    </div>
-    <div class="hero-side">
-      <div class="avatar"><img src="media/me.jpg" alt="Portrait of Giap Nguyen Trong" width="240" height="240"></div>
-      <img class="swing" src="media/swing.gif" alt="Simulation: a humanoid arm swinging up a flexible rod" width="631" height="355" loading="lazy">
+      <p class="links">
+        <a href="cv.pdf">CV</a>
+        <a href="mailto:giapwork98@gmail.com">Email</a>
+        <a href="https://github.com/Giapinner88">GitHub</a>
+        <a href="https://orcid.org/0009-0005-3091-1985">ORCID</a>
+      </p>
     </div>
   </div>
 </header>
@@ -101,8 +97,8 @@
     <h2>Research</h2>
     <div class="cards">
 
-      <article class="card feat" data-id="phantom">
-        <div class="media static"><video src="media/phantom.mp4" poster="media/phantom.jpg" controls preload="none" playsinline muted loop></video></div>
+      <article class="card" data-id="phantom">
+        <div class="media static"><video src="media/swingup.mp4" poster="media/swingup.jpg" controls preload="none" playsinline muted></video></div>
         <h3>Minimal-sensing phantom bending</h3>
         <p class="badges"><span class="b hw">Hardware</span><span class="b st">Journal in preparation</span></p>
         <p>A cart-pole with a flexible TPU beam sensed only at the cart and the base. Reduced-order observers can
@@ -112,7 +108,7 @@
         <div class="btns"></div>
       </article>
 
-      <article class="card feat" data-id="tool">
+      <article class="card" data-id="tool">
         <div class="media static"><video src="media/tool.mp4" poster="media/tool.jpg" controls preload="none" playsinline></video></div>
         <h3>Dynamic tool manipulation</h3>
         <p class="badges"><span class="b sim">Simulation + learning</span><span class="b st">ICRA 2027, under review</span></p>
@@ -123,7 +119,7 @@
       </article>
 
       <article class="card" data-id="swingup">
-        <div class="media static"><video src="media/swingup.mp4" poster="media/swingup.jpg" controls preload="none" playsinline muted loop></video></div>
+        <div class="media static fit"><video src="media/swingup_nmpc.mp4" poster="media/swingup_nmpc.jpg" autoplay muted loop playsinline></video></div>
         <h3>Global swing-up via NMPC</h3>
         <p class="badges"><span class="b sim">Simulation</span><span class="b st">HUST Student Research Conference</span></p>
         <p>A two-segment PRB model and a jaxopt NMPC that exploits the whip effect to swing up an underactuated
@@ -133,7 +129,7 @@
       </article>
 
       <article class="card" data-id="prb">
-        <div class="media"></div>
+        <div class="media static"><video src="media/fip_simulation_PD.mp4" poster="media/prb_sim.jpg" autoplay muted loop playsinline></video></div>
         <h3>High-fidelity PRB modeling</h3>
         <p class="badges"><span class="b sim">Simulation</span><span class="b st">ICEMA 2025</span></p>
         <p>A floating-frame pseudo-rigid-body model with closed-form joint stiffness identification that matches
@@ -212,11 +208,11 @@
   <section id="contact">
     <h2>Contact</h2>
     <p>I am happy to discuss research, collaboration, or graduate opportunities.</p>
-    <div class="btn-row">
-      <a class="btn primary" href="mailto:giapwork98@gmail.com">giapwork98@gmail.com</a>
-      <a class="btn" href="https://github.com/Giapinner88">github.com/Giapinner88</a>
-      <a class="btn" href="cv.pdf">CV (PDF)</a>
-    </div>
+    <p class="links">
+      <a href="mailto:giapwork98@gmail.com">giapwork98@gmail.com</a>
+      <a href="https://github.com/Giapinner88">github.com/Giapinner88</a>
+      <a href="cv.pdf">CV (PDF)</a>
+    </p>
   </section>
 
 </main>
