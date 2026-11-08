@@ -72,15 +72,15 @@ h2 { font-size: 1.25rem; padding-bottom: 6px; margin-bottom: 18px; border-bottom
 
 /* Research */
 .cards { display: grid; gap: 0; }
-.card { display: grid; grid-template-columns: 240px 1fr; gap: 0 24px; padding: 20px 0; border-top: 1px solid var(--line); }
+.card { display: flex; flex-direction: column; padding: 24px 0; border-top: 1px solid var(--line); }
 .card:first-child { border-top: 0; padding-top: 0; }
-.card > * { grid-column: 2; }
-.card > .media { grid-column: 1; grid-row: 1 / span 6; }
 .card h3 { font-size: 1.05rem; margin-bottom: 2px; }
 .badges { margin: 0 0 8px; font-size: .9rem; color: var(--muted); }
 .badges .b + .b::before { content: " · "; }
 .tech { margin: 0; font-size: .88rem; color: var(--muted); }
-.media { position: relative; aspect-ratio: 16 / 9; background: #000; border-radius: 3px; overflow: hidden; align-self: start; }
+.card > .media, .card > .media-pair { order: 10; margin-top: 14px; }
+.media-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.media { position: relative; aspect-ratio: 16 / 9; background: #000; border-radius: 3px; overflow: hidden; }
 .media iframe, .media video, .media img { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
 
 /* Paper / Video / Code links */
@@ -104,12 +104,10 @@ h2 { font-size: 1.25rem; padding-bottom: 6px; margin-bottom: 18px; border-bottom
   .hero { padding: 36px 0 28px; }
   .hero-in { flex-direction: column; align-items: flex-start; gap: 20px; }
   .avatar { width: 120px; height: 120px; }
-  .card, .timeline li, .skills > div { grid-template-columns: 1fr; }
-  .card > .media { grid-column: 1; grid-row: auto; margin-bottom: 12px; }
-  .card > *, .timeline li > *, .timeline .when { grid-column: 1; grid-row: auto; }
+  .timeline li, .skills > div { grid-template-columns: 1fr; }
+  .timeline li > *, .timeline .when { grid-column: 1; grid-row: auto; }
+  .media-pair { grid-template-columns: 1fr; }
 }
-@media print { .nav, .skip, .btns, .media { display: none; } .card { grid-template-columns: 1fr; } }
-.card:not(:has(.media)) { grid-template-columns: 1fr; }
-.card:not(:has(.media)) > * { grid-column: 1; }
+@media print { .nav, .skip, .btns, .media, .media-pair { display: none; } }
 .media.fit { background: #fff; }
 .media.fit video { object-fit: contain; }
